@@ -36,9 +36,9 @@
 
       <h4>{{msgError}}</h4>
 
-      <h2>La lista è vuota</h2>
+      <h2 v-if="lista.length === 0">La lista è vuota</h2>
 
-      <ul>
+      <ul v-else>
 
         <li
           v-for="(item, i) in lista"
