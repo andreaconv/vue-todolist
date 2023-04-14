@@ -5,7 +5,20 @@ createApp({
   data(){
 
     return {
-      msg:'HELLO',
+      lista: [
+        {
+          text: 'fare spesa',
+          done: false,
+        },
+        {
+          text: 'pulire bagno',
+          done: true,
+        },
+        {
+          text: 'cucinare la cena',
+          done: false,
+        },
+      ]
     }
 
   },
@@ -16,5 +29,6 @@ createApp({
 
   mounted() {
     console.log("vue funziona")
+    console.log(this.lista[0].text)
   }
 }).mount('#app')
