@@ -6,18 +6,18 @@ createApp({
 
     return {
       lista: [
-        {
-          text: 'fare spesa',
-          done: false,
-        },
-        {
-          text: 'pulire bagno',
-          done: true,
-        },
-        {
-          text: 'preparare la cena',
-          done: false,
-        },
+        // {
+        //   text: 'fare spesa',
+        //   done: false,
+        // },
+        // {
+        //   text: 'pulire bagno',
+        //   done: true,
+        // },
+        // {
+        //   text: 'preparare la cena',
+        //   done: false,
+        // },
       ],
       msgError: '',
       nuovoItemInserito: '',
@@ -36,12 +36,16 @@ createApp({
     },
 
     aggiungi(){
-      const nuovoItem = {
-        text: this.nuovoItemInserito,
-        done:false,
+      if(this.nuovoItemInserito.length == 0){
+        this.inserisciMsg('Devi inserire un testo')
+      }else {
+        const nuovoItem = {
+          text: this.nuovoItemInserito,
+          done:false,
+        }
+        this.lista.push(nuovoItem);
+        this.nuovoItemInserito= '';
       }
-      this.lista.push(nuovoItem);
-      this.nuovoItemInserito= '';
     },
 
     inserisciMsg(msg){
