@@ -25,7 +25,7 @@
         <img src="assets/IMG/logo.png" alt="">
       </div>
 
-      <div class="input-area mb">
+      <div class="input-area">
         <input
           class="btn"
           type="text"
@@ -33,15 +33,17 @@
         <button class="btn">Aggiungi</button>
       </div>
 
+      <h4>{{msgError}}</h4>
+
       <ul>
 
         <li
-          v-for="item in lista"
+          v-for="(item, i) in lista"
           @click="item.done = !item.done">
 
           <span
             :class="{'done' : item.done}">{{item.text}}</span>
-          <i class="fa-regular fa-circle-xmark"></i>
+          <i @click.stop="elimina(i)" class="fa-regular fa-circle-xmark"></i>
         </li>
 
       </ul>

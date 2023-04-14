@@ -1,8 +1,8 @@
-const {createApp} = Vue;
+const { createApp } = Vue;
 
 createApp({
 
-  data(){
+  data() {
 
     return {
       lista: [
@@ -18,18 +18,28 @@ createApp({
           text: 'preparare la cena',
           done: false,
         },
-      ]
+      ],
+      msgError: '',
     }
 
   },
 
-  methods:{
-    //FUNZIONI
-    
+  methods: { //FUNZIONI
+
+    elimina(i) {
+      if (this.lista[i].done) {
+        this.lista.splice(i, 1)
+        // this.errorMsg ='';
+      } else {
+        console.log("devi sbarrare")
+        this.msgError= 'Devi sbarrare prima di eliminare'
+
+        // this.writeErrorMSg("attenzione, devi prima cancellare")
+      }
+    }
   },
 
   mounted() {
     console.log("vue funziona")
-    console.log(this.lista[2].text)
   }
 }).mount('#app')

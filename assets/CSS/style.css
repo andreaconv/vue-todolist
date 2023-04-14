@@ -12,6 +12,7 @@
 
 .btn{
   padding: 5px 10px;
+  border-radius: 5px;
 }
 
 body{
@@ -52,6 +53,12 @@ body{
   display: flex;
   justify-content: space-evenly;
   width: 40%;
+  margin-bottom: 1rem;
+}
+
+h4{
+  color: red;
+  margin-bottom: 1rem;
 }
 
 ul{
