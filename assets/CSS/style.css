@@ -19,13 +19,6 @@ body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.2rem;
   background-color: #afafaf;
-  /* debug */
-  height: 100vh;
-}
-
-#app{
-  /* debug */
-  height: 100%;
 }
 
 .container{
@@ -35,8 +28,6 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* debug */
-  height: 100%;
   padding: 2rem;
 }
 

@@ -20,6 +20,7 @@ createApp({
         },
       ],
       msgError: '',
+      nuovoItemInserito: '',
     }
 
   },
@@ -30,8 +31,7 @@ createApp({
       if (this.lista[i].done) {
         this.lista.splice(i, 1)
       } else {
-        console.log("devi sbarrare")
-        this.msgError= 'Devi sbarrare prima di eliminare'
+        this.inserisciMsg('Devi sbarrare prima di eliminare')
       }
     },
 
@@ -41,7 +41,14 @@ createApp({
         done:false,
       }
       this.lista.push(nuovoItem);
-      
+      this.nuovoItemInserito= '';
+    },
+
+    inserisciMsg(msg){
+      this.msgError = msg;
+      setTimeout(() => {
+        this.msgError ='';
+      },1500)
     }
   },
 
