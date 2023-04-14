@@ -36,7 +36,9 @@ createApp({
 
         // this.writeErrorMSg("attenzione, devi prima cancellare")
       }
-    }
+    },
+
+    
   },
 
   mounted() {
