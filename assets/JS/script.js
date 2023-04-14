@@ -16,6 +16,5 @@ createApp({
 
   mounted() {
     console.log("vue funziona")
-
   }
 }).mount('#app')

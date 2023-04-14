@@ -10,13 +10,44 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <!-- CSS  -->
   <link rel="stylesheet" href="assets/CSS/style.css">
+  <!-- ICONA -->
+  <link rel="icon" href="assets/IMG/list-check-solid.svg">
   <title>Vue todolist</title>
 </head>
 <body>
 
   
   <div id="app">
-    <h1>{{msg}}</h1>
+
+    <div class="container">
+      
+      <div class="logo mb">
+        <img src="assets/IMG/logo.png" alt="">
+      </div>
+
+      <div class="input-area mb">
+        <input
+          class="btn"
+          type="text"
+          placeholder="Inserire Testo">
+        <button class="btn">Aggiungi</button>
+      </div>
+
+      <ul>
+
+        <li>
+          <span>cose da fare</span>
+          <i class="fa-regular fa-circle-xmark"></i>
+        </li>
+        
+        <li>
+          <span>cose da fare</span>
+          <i class="fa-regular fa-circle-xmark"></i>
+        </li>
+
+      </ul>
+
+    </div>
 
   </div>
   
