@@ -35,8 +35,12 @@
 
       <ul>
 
-        <li v-for="item in lista">
-          <span>{{item.text}}</span>
+        <li
+          v-for="item in lista"
+          @click="item.done = !item.done">
+
+          <span
+            :class="{'done' : item.done}">{{item.text}}</span>
           <i class="fa-regular fa-circle-xmark"></i>
         </li>
 

@@ -15,7 +15,7 @@ createApp({
           done: true,
         },
         {
-          text: 'cucinare la cena',
+          text: 'preparare la cena',
           done: false,
         },
       ]
@@ -25,10 +25,11 @@ createApp({
 
   methods:{
     //FUNZIONI
+    
   },
 
   mounted() {
     console.log("vue funziona")
-    console.log(this.lista[0].text)
+    console.log(this.lista[2].text)
   }
 }).mount('#app')
