@@ -27,10 +27,11 @@
 
       <div class="input-area">
         <input
+          v-model="nuovoItemInserito"
           class="btn"
           type="text"
           placeholder="Inserire Testo">
-        <button class="btn">Aggiungi</button>
+        <button @click="aggiungi" class="btn">Aggiungi</button>
       </div>
 
       <h4>{{msgError}}</h4>

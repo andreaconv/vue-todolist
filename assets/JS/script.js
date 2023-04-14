@@ -29,16 +29,20 @@ createApp({
     elimina(i) {
       if (this.lista[i].done) {
         this.lista.splice(i, 1)
-        // this.errorMsg ='';
       } else {
         console.log("devi sbarrare")
         this.msgError= 'Devi sbarrare prima di eliminare'
-
-        // this.writeErrorMSg("attenzione, devi prima cancellare")
       }
     },
 
-    
+    aggiungi(){
+      const nuovoItem = {
+        text: this.nuovoItemInserito,
+        done:false,
+      }
+      this.lista.push(nuovoItem);
+      
+    }
   },
 
   mounted() {
