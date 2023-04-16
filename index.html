@@ -28,9 +28,12 @@
       <div class="input-area">
         <input
           v-model="nuovoItemInserito"
+          @keyup.enter="aggiungi"
           class="btn"
           type="text"
-          placeholder="Inserire Testo">
+          placeholder="Inserire Testo"
+          >
+
         <button @click="aggiungi" class="btn">Aggiungi</button>
       </div>
 
